@@ -1,9 +1,15 @@
+linux (4.14.30-rt30-halodi2) bionic; urgency=medium
+
+  Removed Spectre/Meltdown patches to improve performance. Do not use this kernel on systems where this is a problem.
+
+ -- Jesper Smith <jesper@LappyMcLapFace>  Thu, 31 May 2018 13:30:48 +0200
+
 linux (4.14.30-rt30-halodi1) bionic; urgency=medium
   
   Build with RT support
    
 
- -- Jesper Smith <jesper@LappyMcLapFace>  Wed, 30 May 2018 16:35:12 +0200
+ -- Jesper Smith <jesper@halodi.com>  Wed, 30 May 2018 16:35:12 +0200
 
 linux (4.14.30-041430.201803250538) unstable; urgency=low
 
