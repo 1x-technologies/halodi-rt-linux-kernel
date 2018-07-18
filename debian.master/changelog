@@ -1,8 +1,10 @@
-linux (4.14.30-rt30-halodi2) bionic; urgency=medium
+linux (4.14.52-rt34-halodi1) UNRELEASED; urgency=medium
 
-  Removed Spectre/Meltdown patches to improve performance. Do not use this kernel on systems where this is a problem.
+  * Removed Spectre/Meltdown patches to improve performance. Do not use this kernel on systems where this is a problem.
+  * Updated to 4.14.52-rt34
+  * Tuned kernel options for lower latency 
 
- -- Jesper Smith <jesper@LappyMcLapFace>  Thu, 31 May 2018 13:30:48 +0200
+ -- Jesper Smith <jesper@halodi.com>  Wed, 18 Jul 2018 10:00:22 +0200
 
 linux (4.14.30-rt30-halodi1) bionic; urgency=medium
   
