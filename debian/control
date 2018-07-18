@@ -48,7 +48,7 @@ Vcs-Git: git://git.launchpad.net/~ubuntu-kernel/ubuntu/+source/linux/+git/zesty
 XS-Testsuite: autopkgtest
 #XS-Testsuite-Depends: gcc-4.7 binutils
 
-Package: linux-source-4.14.30-rt30
+Package: linux-source-4.14.52-rt34
 Build-Profiles: <!stage1>
 Architecture: all
 Section: devel
@@ -57,9 +57,9 @@ Provides: linux-source, linux-source-3
 Depends: ${misc:Depends}, binutils, bzip2, coreutils
 Recommends: libc-dev, gcc, make
 Suggests: libncurses-dev | ncurses-dev, kernel-package, libqt3-dev
-Description: Linux kernel source for version 4.14.30-rt30 with Ubuntu patches
+Description: Linux kernel source for version 4.14.52-rt34 with Ubuntu patches
  This package provides the source code for the Linux kernel version
- 4.14.30-rt30.
+ 4.14.52-rt34.
  .
  This package is mainly meant for other packages to use, in order to build
  custom flavours.
@@ -78,24 +78,24 @@ Architecture: all
 Section: doc
 Priority: optional
 Depends: ${misc:Depends}
-Description: Linux kernel specific documentation for version 4.14.30-rt30
- This package provides the various documents in the 4.14.30-rt30 kernel
+Description: Linux kernel specific documentation for version 4.14.52-rt34
+ This package provides the various documents in the 4.14.52-rt34 kernel
  Documentation/ subdirectory.  These document kernel subsystems, APIs, device
  drivers, and so on.  See
  /usr/share/doc/linux-doc/00-INDEX for a list of what is
  contained in each file.
 
-Package: linux-headers-4.14.30-rt30-halodi2
+Package: linux-headers-4.14.52-rt34-halodi1
 Build-Profiles: <!stage1>
 Architecture: all
 Multi-Arch: foreign
 Section: devel
 Priority: optional
 Depends: ${misc:Depends}, coreutils
-Description: Header files related to Linux kernel version 4.14.30-rt30
- This package provides kernel header files for version 4.14.30-rt30, for sites
+Description: Header files related to Linux kernel version 4.14.52-rt34
+ This package provides kernel header files for version 4.14.52-rt34, for sites
  that want the latest kernel headers. Please read
- /usr/share/doc/linux-headers-4.14.30-rt30-halodi2/debian.README.gz for details
+ /usr/share/doc/linux-headers-4.14.52-rt34-halodi1/debian.README.gz for details
 
 Package: linux-libc-dev
 Architecture: i386 amd64 armhf arm64 x32 ppc64el s390x
@@ -117,23 +117,23 @@ Multi-Arch: foreign
 Section: kernel
 Priority: optional
 Depends: ${misc:Depends}, lsb-release
-Description: Linux kernel version specific tools for version 4.14.30-rt30
+Description: Linux kernel version specific tools for version 4.14.52-rt34
  This package provides the architecture independent parts for kernel
  version locked tools (such as perf and x86_energy_perf_policy) for
  version PGKVER.
 
-Package: linux-tools-4.14.30-rt30-halodi2
+Package: linux-tools-4.14.52-rt34-halodi1
 Build-Profiles: <!stage1>
 Architecture: i386 amd64 armhf arm64 ppc64el s390x
 Section: devel
 Priority: optional
 Depends: ${misc:Depends}, ${shlibs:Depends}, linux-tools-common
-Description: Linux kernel version specific tools for version 4.14.30-rt30-halodi2
+Description: Linux kernel version specific tools for version 4.14.52-rt34-halodi1
  This package provides the architecture dependant parts for kernel
  version locked tools (such as perf and x86_energy_perf_policy) for
- version 4.14.30-rt30-halodi2 on
+ version 4.14.52-rt34-halodi1 on
  64 bit x86.
- You probably want to install linux-tools-4.14.30-rt30-halodi2-<flavour>.
+ You probably want to install linux-tools-4.14.52-rt34-halodi1-<flavour>.
 
 Package: linux-cloud-tools-common
 Build-Profiles: <!stage1>
@@ -142,24 +142,24 @@ Multi-Arch: foreign
 Section: kernel
 Priority: optional
 Depends: ${misc:Depends}
-Description: Linux kernel version specific cloud tools for version 4.14.30-rt30
+Description: Linux kernel version specific cloud tools for version 4.14.52-rt34
  This package provides the architecture independent parts for kernel
  version locked tools for cloud tools for version PGKVER.
 
-Package: linux-cloud-tools-4.14.30-rt30-halodi2
+Package: linux-cloud-tools-4.14.52-rt34-halodi1
 Build-Profiles: <!stage1>
 Architecture: i386 amd64 armhf
 Section: devel
 Priority: optional
 Depends: ${misc:Depends}, ${shlibs:Depends}, linux-cloud-tools-common
-Description: Linux kernel version specific cloud tools for version 4.14.30-rt30-halodi2
+Description: Linux kernel version specific cloud tools for version 4.14.52-rt34-halodi1
  This package provides the architecture dependant parts for kernel
- version locked tools for cloud tools for version 4.14.30-rt30-halodi2 on
+ version locked tools for cloud tools for version 4.14.52-rt34-halodi1 on
  64 bit x86.
- You probably want to install linux-cloud-tools-4.14.30-rt30-halodi2-<flavour>.
+ You probably want to install linux-cloud-tools-4.14.52-rt34-halodi1-<flavour>.
 
 
-Package: linux-image-4.14.30-rt30-halodi2-generic
+Package: linux-image-4.14.52-rt34-halodi1-generic
 Build-Profiles: <!stage1>
 Architecture: i386 amd64 armhf arm64 ppc64el s390x
 Section: kernel
@@ -168,9 +168,9 @@ Provides: linux-image, fuse-module, aufs-dkms, kvm-api-4, redhat-cluster-modules
 Depends: ${misc:Depends}, ${shlibs:Depends}, kmod
 Recommends: grub-pc [i386 amd64 x32] | grub-efi-amd64 [amd64 x32] | grub-efi-ia32 [i386 amd64 x32] | grub [i386 amd64 x32] | lilo [i386 amd64 x32] | flash-kernel [armhf arm64] | grub-ieee1275 [ppc64el], initramfs-tools | linux-initramfs-tool
 Breaks: flash-kernel (<< 3.0~rc.4ubuntu64) [arm64]
-Suggests: fdutils, linux-doc-4.14.30-rt30 | linux-source-4.14.30-rt30, linux-tools, linux-headers-4.14.30-rt30-halodi2-generic
-Description: Linux kernel image for version 4.14.30-rt30 on 64 bit x86 SMP
- This package contains the Linux kernel image for version 4.14.30-rt30 on
+Suggests: fdutils, linux-doc-4.14.52-rt34 | linux-source-4.14.52-rt34, linux-tools, linux-headers-4.14.52-rt34-halodi1-generic
+Description: Linux kernel image for version 4.14.52-rt34 on 64 bit x86 SMP
+ This package contains the Linux kernel image for version 4.14.52-rt34 on
  64 bit x86 SMP.
  .
  Also includes the corresponding System.map file, the modules built by the
@@ -185,14 +185,14 @@ Description: Linux kernel image for version 4.14.30-rt30 on 64 bit x86 SMP
  the linux-generic meta-package, which will ensure that upgrades work
  correctly, and that supporting packages are also installed.
 
-Package: linux-image-extra-4.14.30-rt30-halodi2-generic
+Package: linux-image-extra-4.14.52-rt34-halodi1-generic
 Build-Profiles: <!stage1>
 Architecture: i386 amd64 armhf arm64 ppc64el s390x
 Section: kernel
 Priority: optional
-Depends: ${misc:Depends}, ${shlibs:Depends}, linux-image-4.14.30-rt30-halodi2-generic, crda | wireless-crda
-Description: Linux kernel extra modules for version 4.14.30-rt30 on 64 bit x86 SMP
- This package contains the Linux kernel extra modules for version 4.14.30-rt30 on
+Depends: ${misc:Depends}, ${shlibs:Depends}, linux-image-4.14.52-rt34-halodi1-generic, crda | wireless-crda
+Description: Linux kernel extra modules for version 4.14.52-rt34 on 64 bit x86 SMP
+ This package contains the Linux kernel extra modules for version 4.14.52-rt34 on
  64 bit x86 SMP.
  .
  Also includes the corresponding System.map file, the modules built by the
@@ -207,29 +207,29 @@ Description: Linux kernel extra modules for version 4.14.30-rt30 on 64 bit x86 S
  the linux-generic meta-package, which will ensure that upgrades work
  correctly, and that supporting packages are also installed.
 
-Package: linux-headers-4.14.30-rt30-halodi2-generic
+Package: linux-headers-4.14.52-rt34-halodi1-generic
 Build-Profiles: <!stage1>
 Architecture: i386 amd64 armhf arm64 ppc64el s390x
 Section: devel
 Priority: optional
-Depends: ${misc:Depends}, linux-headers-4.14.30-rt30-halodi2, ${shlibs:Depends}
+Depends: ${misc:Depends}, linux-headers-4.14.52-rt34-halodi1, ${shlibs:Depends}
 Provides: linux-headers, linux-headers-3.0
-Description: Linux kernel headers for version 4.14.30-rt30 on 64 bit x86 SMP
- This package provides kernel header files for version 4.14.30-rt30 on
+Description: Linux kernel headers for version 4.14.52-rt34 on 64 bit x86 SMP
+ This package provides kernel header files for version 4.14.52-rt34 on
  64 bit x86 SMP.
  .
  This is for sites that want the latest kernel headers.  Please read
- /usr/share/doc/linux-headers-4.14.30-rt30-halodi2/debian.README.gz for details.
+ /usr/share/doc/linux-headers-4.14.52-rt34-halodi1/debian.README.gz for details.
 
-Package: linux-image-4.14.30-rt30-halodi2-generic-dbgsym
+Package: linux-image-4.14.52-rt34-halodi1-generic-dbgsym
 Build-Profiles: <!stage1>
 Architecture: i386 amd64 armhf arm64 ppc64el s390x
 Section: devel
 Priority: optional
 Depends: ${misc:Depends}
 Provides: linux-debug
-Description: Linux kernel debug image for version 4.14.30-rt30 on 64 bit x86 SMP
- This package provides a kernel debug image for version 4.14.30-rt30 on
+Description: Linux kernel debug image for version 4.14.52-rt34 on 64 bit x86 SMP
+ This package provides a kernel debug image for version 4.14.52-rt34 on
  64 bit x86 SMP.
  .
  This is for sites that wish to debug the kernel.
@@ -238,27 +238,27 @@ Description: Linux kernel debug image for version 4.14.30-rt30 on 64 bit x86 SMP
  is uncompressed, and unstripped. This package also includes the
  unstripped modules.
 
-Package: linux-tools-4.14.30-rt30-halodi2-generic
+Package: linux-tools-4.14.52-rt34-halodi1-generic
 Build-Profiles: <!stage1>
 Architecture: i386 amd64 armhf arm64 ppc64el s390x
 Section: devel
 Priority: optional
-Depends: ${misc:Depends}, linux-tools-4.14.30-rt30-halodi2
-Description: Linux kernel version specific tools for version 4.14.30-rt30-halodi2
+Depends: ${misc:Depends}, linux-tools-4.14.52-rt34-halodi1
+Description: Linux kernel version specific tools for version 4.14.52-rt34-halodi1
  This package provides the architecture dependant parts for kernel
  version locked tools (such as perf and x86_energy_perf_policy) for
- version 4.14.30-rt30-halodi2 on
+ version 4.14.52-rt34-halodi1 on
  64 bit x86.
 
-Package: linux-cloud-tools-4.14.30-rt30-halodi2-generic
+Package: linux-cloud-tools-4.14.52-rt34-halodi1-generic
 Build-Profiles: <!stage1>
 Architecture: i386 amd64 armhf arm64 ppc64el s390x
 Section: devel
 Priority: optional
-Depends: ${misc:Depends}, linux-cloud-tools-4.14.30-rt30-halodi2
-Description: Linux kernel version specific cloud tools for version 4.14.30-rt30-halodi2
+Depends: ${misc:Depends}, linux-cloud-tools-4.14.52-rt34-halodi1
+Description: Linux kernel version specific cloud tools for version 4.14.52-rt34-halodi1
  This package provides the architecture dependant parts for kernel
- version locked tools for cloud for version 4.14.30-rt30-halodi2 on
+ version locked tools for cloud for version 4.14.52-rt34-halodi1 on
  64 bit x86.
 
 Package: linux-udebs-generic
@@ -272,7 +272,7 @@ Description: Metapackage depending on kernel udebs
  for easier version and migration tracking.
 
 
-Package: linux-image-4.14.30-rt30-halodi2-generic-lpae
+Package: linux-image-4.14.52-rt34-halodi1-generic-lpae
 Build-Profiles: <!stage1>
 Architecture: armhf
 Section: kernel
@@ -281,9 +281,9 @@ Provides: linux-image, fuse-module, aufs-dkms, kvm-api-4, redhat-cluster-modules
 Depends: ${misc:Depends}, ${shlibs:Depends}, kmod
 Recommends: flash-kernel [armhf], initramfs-tools | linux-initramfs-tool
 Breaks: flash-kernel (<< 3.0~rc.4ubuntu64) [arm64]
-Suggests: fdutils, linux-doc-4.14.30-rt30 | linux-source-4.14.30-rt30, linux-tools, linux-headers-4.14.30-rt30-halodi2-generic-lpae
-Description: Linux kernel image for version 4.14.30-rt30 on 64 bit x86 SMP
- This package contains the Linux kernel image for version 4.14.30-rt30 on
+Suggests: fdutils, linux-doc-4.14.52-rt34 | linux-source-4.14.52-rt34, linux-tools, linux-headers-4.14.52-rt34-halodi1-generic-lpae
+Description: Linux kernel image for version 4.14.52-rt34 on 64 bit x86 SMP
+ This package contains the Linux kernel image for version 4.14.52-rt34 on
  64 bit x86 SMP.
  .
  Also includes the corresponding System.map file, the modules built by the
@@ -298,14 +298,14 @@ Description: Linux kernel image for version 4.14.30-rt30 on 64 bit x86 SMP
  the linux-generic-lpae meta-package, which will ensure that upgrades work
  correctly, and that supporting packages are also installed.
 
-Package: linux-image-extra-4.14.30-rt30-halodi2-generic-lpae
+Package: linux-image-extra-4.14.52-rt34-halodi1-generic-lpae
 Build-Profiles: <!stage1>
 Architecture: armhf
 Section: kernel
 Priority: optional
-Depends: ${misc:Depends}, ${shlibs:Depends}, linux-image-4.14.30-rt30-halodi2-generic-lpae, crda | wireless-crda
-Description: Linux kernel extra modules for version 4.14.30-rt30 on 64 bit x86 SMP
- This package contains the Linux kernel extra modules for version 4.14.30-rt30 on
+Depends: ${misc:Depends}, ${shlibs:Depends}, linux-image-4.14.52-rt34-halodi1-generic-lpae, crda | wireless-crda
+Description: Linux kernel extra modules for version 4.14.52-rt34 on 64 bit x86 SMP
+ This package contains the Linux kernel extra modules for version 4.14.52-rt34 on
  64 bit x86 SMP.
  .
  Also includes the corresponding System.map file, the modules built by the
@@ -320,29 +320,29 @@ Description: Linux kernel extra modules for version 4.14.30-rt30 on 64 bit x86 S
  the linux-generic-lpae meta-package, which will ensure that upgrades work
  correctly, and that supporting packages are also installed.
 
-Package: linux-headers-4.14.30-rt30-halodi2-generic-lpae
+Package: linux-headers-4.14.52-rt34-halodi1-generic-lpae
 Build-Profiles: <!stage1>
 Architecture: armhf
 Section: devel
 Priority: optional
-Depends: ${misc:Depends}, linux-headers-4.14.30-rt30-halodi2, ${shlibs:Depends}
+Depends: ${misc:Depends}, linux-headers-4.14.52-rt34-halodi1, ${shlibs:Depends}
 Provides: linux-headers, linux-headers-3.0
-Description: Linux kernel headers for version 4.14.30-rt30 on 64 bit x86 SMP
- This package provides kernel header files for version 4.14.30-rt30 on
+Description: Linux kernel headers for version 4.14.52-rt34 on 64 bit x86 SMP
+ This package provides kernel header files for version 4.14.52-rt34 on
  64 bit x86 SMP.
  .
  This is for sites that want the latest kernel headers.  Please read
- /usr/share/doc/linux-headers-4.14.30-rt30-halodi2/debian.README.gz for details.
+ /usr/share/doc/linux-headers-4.14.52-rt34-halodi1/debian.README.gz for details.
 
-Package: linux-image-4.14.30-rt30-halodi2-generic-lpae-dbgsym
+Package: linux-image-4.14.52-rt34-halodi1-generic-lpae-dbgsym
 Build-Profiles: <!stage1>
 Architecture: armhf
 Section: devel
 Priority: optional
 Depends: ${misc:Depends}
 Provides: linux-debug
-Description: Linux kernel debug image for version 4.14.30-rt30 on 64 bit x86 SMP
- This package provides a kernel debug image for version 4.14.30-rt30 on
+Description: Linux kernel debug image for version 4.14.52-rt34 on 64 bit x86 SMP
+ This package provides a kernel debug image for version 4.14.52-rt34 on
  64 bit x86 SMP.
  .
  This is for sites that wish to debug the kernel.
@@ -351,27 +351,27 @@ Description: Linux kernel debug image for version 4.14.30-rt30 on 64 bit x86 SMP
  is uncompressed, and unstripped. This package also includes the
  unstripped modules.
 
-Package: linux-tools-4.14.30-rt30-halodi2-generic-lpae
+Package: linux-tools-4.14.52-rt34-halodi1-generic-lpae
 Build-Profiles: <!stage1>
 Architecture: armhf
 Section: devel
 Priority: optional
-Depends: ${misc:Depends}, linux-tools-4.14.30-rt30-halodi2
-Description: Linux kernel version specific tools for version 4.14.30-rt30-halodi2
+Depends: ${misc:Depends}, linux-tools-4.14.52-rt34-halodi1
+Description: Linux kernel version specific tools for version 4.14.52-rt34-halodi1
  This package provides the architecture dependant parts for kernel
  version locked tools (such as perf and x86_energy_perf_policy) for
- version 4.14.30-rt30-halodi2 on
+ version 4.14.52-rt34-halodi1 on
  64 bit x86.
 
-Package: linux-cloud-tools-4.14.30-rt30-halodi2-generic-lpae
+Package: linux-cloud-tools-4.14.52-rt34-halodi1-generic-lpae
 Build-Profiles: <!stage1>
 Architecture: armhf
 Section: devel
 Priority: optional
-Depends: ${misc:Depends}, linux-cloud-tools-4.14.30-rt30-halodi2
-Description: Linux kernel version specific cloud tools for version 4.14.30-rt30-halodi2
+Depends: ${misc:Depends}, linux-cloud-tools-4.14.52-rt34-halodi1
+Description: Linux kernel version specific cloud tools for version 4.14.52-rt34-halodi1
  This package provides the architecture dependant parts for kernel
- version locked tools for cloud for version 4.14.30-rt30-halodi2 on
+ version locked tools for cloud for version 4.14.52-rt34-halodi1 on
  64 bit x86.
 
 Package: linux-udebs-generic-lpae
