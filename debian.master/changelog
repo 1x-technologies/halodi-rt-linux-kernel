@@ -1,3 +1,9 @@
+linux (4.14.52-rt34-halodi2) bionic; urgency=medium
+
+  *  Latency Tuning
+
+ -- Jesper Smith <jesper@halodi.com>  Fri, 20 Jul 2018 17:55:13 +0200
+
 linux (4.14.52-rt34-halodi1) bionic; urgency=medium
 
   * Removed Spectre/Meltdown patches to improve performance. Do not use this kernel on systems where this is a problem.

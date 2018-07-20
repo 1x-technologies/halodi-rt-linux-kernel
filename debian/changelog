@@ -1,8 +1,8 @@
 linux (4.14.52-rt34-halodi2) bionic; urgency=medium
 
-  * Latency tuning
+  *  Latency Tuning
 
- -- Jesper Smith <jesper@halodi.com>  Fri, 20 Jul 2018 15:18:38 +0200
+ -- Jesper Smith <jesper@halodi.com>  Fri, 20 Jul 2018 17:55:13 +0200
 
 linux (4.14.52-rt34-halodi1) bionic; urgency=medium
 
