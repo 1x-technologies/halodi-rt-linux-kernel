@@ -1,0 +1,13 @@
+linux (5.4.24-rt15-halodi1) bionic; urgency=medium
+
+  * Patch with RT patch.
+  * Configured for low latency
+
+ -- Jesper Smith <jesper@halodi.com>  Fri, 13 Mar 2020 11:32:50 +0100
+
+linux (5.4.24-050424.202003051135) focal; urgency=low
+
+  Mainline build at commit: v5.4.24
+
+ -- Mainline Build <kernel@tangerine>  Thu, 05 Mar 2020 11:35:11 -0500
+
