@@ -37,6 +37,7 @@ Build-Depends:
  dkms <!stage1>,
  curl <!stage1>,
  liblz4-1 [amd64 s390x] <!stage1>,
+ liblz4-tool [amd64 s390x] <!stage1>,
 Build-Depends-Indep:
  xmlto <!stage1>,
  docbook-utils <!stage1>,
