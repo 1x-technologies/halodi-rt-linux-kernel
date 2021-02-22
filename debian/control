@@ -50,7 +50,7 @@ Build-Depends-Indep:
  python3-sphinx-rtd-theme <!stage1>,
  fontconfig <!stage1>,
  python3-docutils <!stage1>,
-Vcs-Git: git://git.launchpad.net/~ubuntu-kernel/ubuntu/+source/linux/+git/bionic
+Vcs-Git: git://git.launchpad.net/~ubuntu-kernel/ubuntu/+source/linux/+git/focal
 XS-Testsuite: autopkgtest
 #XS-Testsuite-Depends: gcc-4.7 binutils
 
@@ -78,7 +78,7 @@ Description: Linux kernel source for version 5.4.24-rt15 with Ubuntu patches
  you do not want this package. Install the appropriate linux-headers
  package instead.
 
-Package: linux-headers-5.4.24-rt15-halodi2
+Package: linux-headers-5.4.24-rt15-halodi3
 Build-Profiles: <!stage1>
 Architecture: all
 Multi-Arch: foreign
@@ -88,7 +88,7 @@ Depends: ${misc:Depends}, coreutils
 Description: Header files related to Linux kernel version 5.4.24-rt15
  This package provides kernel header files for version 5.4.24-rt15, for sites
  that want the latest kernel headers. Please read
- /usr/share/doc/linux-headers-5.4.24-rt15-halodi2/debian.README.gz for details
+ /usr/share/doc/linux-headers-5.4.24-rt15-halodi3/debian.README.gz for details
 
 Package: linux-tools-common
 Build-Profiles: <!stage1>
@@ -102,18 +102,18 @@ Description: Linux kernel version specific tools for version 5.4.24-rt15
  version locked tools (such as perf and x86_energy_perf_policy) for
  version PGKVER.
 
-Package: linux-tools-5.4.24-rt15-halodi2
+Package: linux-tools-5.4.24-rt15-halodi3
 Build-Profiles: <!stage1>
 Architecture: amd64 armhf arm64 ppc64el s390x
 Section: devel
 Priority: optional
 Depends: ${misc:Depends}, ${shlibs:Depends}, linux-tools-common
-Description: Linux kernel version specific tools for version 5.4.24-rt15-halodi2
+Description: Linux kernel version specific tools for version 5.4.24-rt15-halodi3
  This package provides the architecture dependant parts for kernel
  version locked tools (such as perf and x86_energy_perf_policy) for
- version 5.4.24-rt15-halodi2 on
+ version 5.4.24-rt15-halodi3 on
  64 bit x86.
- You probably want to install linux-tools-5.4.24-rt15-halodi2-<flavour>.
+ You probably want to install linux-tools-5.4.24-rt15-halodi3-<flavour>.
 
 Package: linux-cloud-tools-common
 Build-Profiles: <!stage1>
@@ -126,17 +126,17 @@ Description: Linux kernel version specific cloud tools for version 5.4.24-rt15
  This package provides the architecture independent parts for kernel
  version locked tools for cloud tools for version PGKVER.
 
-Package: linux-cloud-tools-5.4.24-rt15-halodi2
+Package: linux-cloud-tools-5.4.24-rt15-halodi3
 Build-Profiles: <!stage1>
 Architecture: amd64 armhf
 Section: devel
 Priority: optional
 Depends: ${misc:Depends}, ${shlibs:Depends}, linux-cloud-tools-common
-Description: Linux kernel version specific cloud tools for version 5.4.24-rt15-halodi2
+Description: Linux kernel version specific cloud tools for version 5.4.24-rt15-halodi3
  This package provides the architecture dependant parts for kernel
- version locked tools for cloud tools for version 5.4.24-rt15-halodi2 on
+ version locked tools for cloud tools for version 5.4.24-rt15-halodi3 on
  64 bit x86.
- You probably want to install linux-cloud-tools-5.4.24-rt15-halodi2-<flavour>.
+ You probably want to install linux-cloud-tools-5.4.24-rt15-halodi3-<flavour>.
 
 Package: linux-tools-host
 Build-Profiles: <!stage1>
@@ -176,17 +176,17 @@ Description: Linux kernel specific documentation for version 5.4.24-rt15
  contained in each file.
 
 
-Package: linux-image-unsigned-5.4.24-rt15-halodi2-generic
+Package: linux-image-unsigned-5.4.24-rt15-halodi3-generic
 Build-Profiles: <!stage1>
 Architecture: amd64 armhf arm64 ppc64el s390x
 Section: kernel
 Priority: optional
 Provides: linux-image, fuse-module, aufs-dkms, kvm-api-4, redhat-cluster-modules, ivtv-modules, virtualbox-guest-modules [amd64], ${linux:rprovides}
-Depends: ${misc:Depends}, ${shlibs:Depends}, kmod, linux-base (>= 4.5ubuntu1~16.04.1), linux-modules-5.4.24-rt15-halodi2-generic
+Depends: ${misc:Depends}, ${shlibs:Depends}, kmod, linux-base (>= 4.5ubuntu1~16.04.1), linux-modules-5.4.24-rt15-halodi3-generic
 Recommends: grub-pc [amd64] | grub-efi-amd64 [amd64] | grub-efi-ia32 [amd64] | grub [amd64] | lilo [amd64] | flash-kernel [armhf arm64] | grub-ieee1275 [ppc64el], initramfs-tools | linux-initramfs-tool
 Breaks: flash-kernel (<< 3.90ubuntu2) [arm64 armhf], s390-tools (<< 2.3.0-0ubuntu3) [s390x]
-Conflicts: linux-image-5.4.24-rt15-halodi2-generic
-Suggests: fdutils, linux-doc | linux-source-5.4.24-rt15, linux-tools, linux-headers-5.4.24-rt15-halodi2-generic
+Conflicts: linux-image-5.4.24-rt15-halodi3-generic
+Suggests: fdutils, linux-doc | linux-source-5.4.24-rt15, linux-tools, linux-headers-5.4.24-rt15-halodi3-generic
 Description: Linux kernel image for version 5.4.24-rt15 on 64 bit x86 SMP
  This package contains the unsigned Linux kernel image for version 5.4.24-rt15 on
  64 bit x86 SMP.
@@ -199,7 +199,7 @@ Description: Linux kernel image for version 5.4.24-rt15 on 64 bit x86 SMP
  the linux-generic meta-package, which will ensure that upgrades work
  correctly, and that supporting packages are also installed.
 
-Package: linux-modules-5.4.24-rt15-halodi2-generic
+Package: linux-modules-5.4.24-rt15-halodi3-generic
 Build-Profiles: <!stage1>
 Architecture: amd64 armhf arm64 ppc64el s390x
 Section: kernel
@@ -219,12 +219,12 @@ Description: Linux kernel extra modules for version 5.4.24-rt15 on 64 bit x86 SM
  the linux-generic meta-package, which will ensure that upgrades work
  correctly, and that supporting packages are also installed.
 
-Package: linux-modules-extra-5.4.24-rt15-halodi2-generic
+Package: linux-modules-extra-5.4.24-rt15-halodi3-generic
 Build-Profiles: <!stage1>
 Architecture: amd64 armhf arm64 ppc64el s390x
 Section: kernel
 Priority: optional
-Depends: ${misc:Depends}, ${shlibs:Depends}, linux-image-5.4.24-rt15-halodi2-generic | linux-image-unsigned-5.4.24-rt15-halodi2-generic, crda | wireless-crda
+Depends: ${misc:Depends}, ${shlibs:Depends}, linux-image-5.4.24-rt15-halodi3-generic | linux-image-unsigned-5.4.24-rt15-halodi3-generic, crda | wireless-crda
 Description: Linux kernel extra modules for version 5.4.24-rt15 on 64 bit x86 SMP
  This package contains the Linux kernel extra modules for version 5.4.24-rt15 on
  64 bit x86 SMP.
@@ -241,21 +241,21 @@ Description: Linux kernel extra modules for version 5.4.24-rt15 on 64 bit x86 SM
  the linux-generic meta-package, which will ensure that upgrades work
  correctly, and that supporting packages are also installed.
 
-Package: linux-headers-5.4.24-rt15-halodi2-generic
+Package: linux-headers-5.4.24-rt15-halodi3-generic
 Build-Profiles: <!stage1>
 Architecture: amd64 armhf arm64 ppc64el s390x
 Section: devel
 Priority: optional
-Depends: ${misc:Depends}, linux-headers-5.4.24-rt15-halodi2, ${shlibs:Depends}
+Depends: ${misc:Depends}, linux-headers-5.4.24-rt15-halodi3, ${shlibs:Depends}
 Provides: linux-headers, linux-headers-3.0
 Description: Linux kernel headers for version 5.4.24-rt15 on 64 bit x86 SMP
  This package provides kernel header files for version 5.4.24-rt15 on
  64 bit x86 SMP.
  .
  This is for sites that want the latest kernel headers.  Please read
- /usr/share/doc/linux-headers-5.4.24-rt15-halodi2/debian.README.gz for details.
+ /usr/share/doc/linux-headers-5.4.24-rt15-halodi3/debian.README.gz for details.
 
-Package: linux-image-unsigned-5.4.24-rt15-halodi2-generic-dbgsym
+Package: linux-image-unsigned-5.4.24-rt15-halodi3-generic-dbgsym
 Build-Profiles: <!stage1>
 Architecture: amd64 armhf arm64 ppc64el s390x
 Section: devel
@@ -272,27 +272,27 @@ Description: Linux kernel debug image for version 5.4.24-rt15 on 64 bit x86 SMP
  is uncompressed, and unstripped. This package also includes the
  unstripped modules.
 
-Package: linux-tools-5.4.24-rt15-halodi2-generic
+Package: linux-tools-5.4.24-rt15-halodi3-generic
 Build-Profiles: <!stage1>
 Architecture: amd64 armhf arm64 ppc64el s390x
 Section: devel
 Priority: optional
-Depends: ${misc:Depends}, linux-tools-5.4.24-rt15-halodi2
-Description: Linux kernel version specific tools for version 5.4.24-rt15-halodi2
+Depends: ${misc:Depends}, linux-tools-5.4.24-rt15-halodi3
+Description: Linux kernel version specific tools for version 5.4.24-rt15-halodi3
  This package provides the architecture dependant parts for kernel
  version locked tools (such as perf and x86_energy_perf_policy) for
- version 5.4.24-rt15-halodi2 on
+ version 5.4.24-rt15-halodi3 on
  64 bit x86.
 
-Package: linux-cloud-tools-5.4.24-rt15-halodi2-generic
+Package: linux-cloud-tools-5.4.24-rt15-halodi3-generic
 Build-Profiles: <!stage1>
 Architecture: amd64 armhf arm64 ppc64el s390x
 Section: devel
 Priority: optional
-Depends: ${misc:Depends}, linux-cloud-tools-5.4.24-rt15-halodi2
-Description: Linux kernel version specific cloud tools for version 5.4.24-rt15-halodi2
+Depends: ${misc:Depends}, linux-cloud-tools-5.4.24-rt15-halodi3
+Description: Linux kernel version specific cloud tools for version 5.4.24-rt15-halodi3
  This package provides the architecture dependant parts for kernel
- version locked tools for cloud for version 5.4.24-rt15-halodi2 on
+ version locked tools for cloud for version 5.4.24-rt15-halodi3 on
  64 bit x86.
 
 Package: linux-udebs-generic
@@ -306,7 +306,7 @@ Description: Metapackage depending on kernel udebs
  for easier version and migration tracking.
 
 
-Package: linux-buildinfo-5.4.24-rt15-halodi2-generic
+Package: linux-buildinfo-5.4.24-rt15-halodi3-generic
 Build-Profiles: <!stage1>
 Architecture: amd64 armhf arm64 ppc64el s390x
 Section: kernel
@@ -319,17 +319,17 @@ Description: Linux kernel buildinfo for version 5.4.24-rt15 on 64 bit x86 SMP
  .
  You likely do not want to install this package.
 
-Package: linux-image-unsigned-5.4.24-rt15-halodi2-generic-lpae
+Package: linux-image-unsigned-5.4.24-rt15-halodi3-generic-lpae
 Build-Profiles: <!stage1>
 Architecture: armhf
 Section: kernel
 Priority: optional
 Provides: linux-image, fuse-module, aufs-dkms, kvm-api-4, redhat-cluster-modules, ivtv-modules, ${linux:rprovides}
-Depends: ${misc:Depends}, ${shlibs:Depends}, kmod, linux-base (>= 4.5ubuntu1~16.04.1), linux-modules-5.4.24-rt15-halodi2-generic-lpae
+Depends: ${misc:Depends}, ${shlibs:Depends}, kmod, linux-base (>= 4.5ubuntu1~16.04.1), linux-modules-5.4.24-rt15-halodi3-generic-lpae
 Recommends: flash-kernel [armhf], initramfs-tools | linux-initramfs-tool
 Breaks: flash-kernel (<< 3.90ubuntu2) [arm64 armhf], s390-tools (<< 2.3.0-0ubuntu3) [s390x]
-Conflicts: linux-image-5.4.24-rt15-halodi2-generic-lpae
-Suggests: fdutils, linux-doc | linux-source-5.4.24-rt15, linux-tools, linux-headers-5.4.24-rt15-halodi2-generic-lpae
+Conflicts: linux-image-5.4.24-rt15-halodi3-generic-lpae
+Suggests: fdutils, linux-doc | linux-source-5.4.24-rt15, linux-tools, linux-headers-5.4.24-rt15-halodi3-generic-lpae
 Description: Linux kernel image for version 5.4.24-rt15 on 64 bit x86 SMP
  This package contains the unsigned Linux kernel image for version 5.4.24-rt15 on
  64 bit x86 SMP.
@@ -342,7 +342,7 @@ Description: Linux kernel image for version 5.4.24-rt15 on 64 bit x86 SMP
  the linux-generic-lpae meta-package, which will ensure that upgrades work
  correctly, and that supporting packages are also installed.
 
-Package: linux-modules-5.4.24-rt15-halodi2-generic-lpae
+Package: linux-modules-5.4.24-rt15-halodi3-generic-lpae
 Build-Profiles: <!stage1>
 Architecture: armhf
 Section: kernel
@@ -362,12 +362,12 @@ Description: Linux kernel extra modules for version 5.4.24-rt15 on 64 bit x86 SM
  the linux-generic-lpae meta-package, which will ensure that upgrades work
  correctly, and that supporting packages are also installed.
 
-Package: linux-modules-extra-5.4.24-rt15-halodi2-generic-lpae
+Package: linux-modules-extra-5.4.24-rt15-halodi3-generic-lpae
 Build-Profiles: <!stage1>
 Architecture: armhf
 Section: kernel
 Priority: optional
-Depends: ${misc:Depends}, ${shlibs:Depends}, linux-image-5.4.24-rt15-halodi2-generic-lpae | linux-image-unsigned-5.4.24-rt15-halodi2-generic-lpae, crda | wireless-crda
+Depends: ${misc:Depends}, ${shlibs:Depends}, linux-image-5.4.24-rt15-halodi3-generic-lpae | linux-image-unsigned-5.4.24-rt15-halodi3-generic-lpae, crda | wireless-crda
 Description: Linux kernel extra modules for version 5.4.24-rt15 on 64 bit x86 SMP
  This package contains the Linux kernel extra modules for version 5.4.24-rt15 on
  64 bit x86 SMP.
@@ -384,21 +384,21 @@ Description: Linux kernel extra modules for version 5.4.24-rt15 on 64 bit x86 SM
  the linux-generic-lpae meta-package, which will ensure that upgrades work
  correctly, and that supporting packages are also installed.
 
-Package: linux-headers-5.4.24-rt15-halodi2-generic-lpae
+Package: linux-headers-5.4.24-rt15-halodi3-generic-lpae
 Build-Profiles: <!stage1>
 Architecture: armhf
 Section: devel
 Priority: optional
-Depends: ${misc:Depends}, linux-headers-5.4.24-rt15-halodi2, ${shlibs:Depends}
+Depends: ${misc:Depends}, linux-headers-5.4.24-rt15-halodi3, ${shlibs:Depends}
 Provides: linux-headers, linux-headers-3.0
 Description: Linux kernel headers for version 5.4.24-rt15 on 64 bit x86 SMP
  This package provides kernel header files for version 5.4.24-rt15 on
  64 bit x86 SMP.
  .
  This is for sites that want the latest kernel headers.  Please read
- /usr/share/doc/linux-headers-5.4.24-rt15-halodi2/debian.README.gz for details.
+ /usr/share/doc/linux-headers-5.4.24-rt15-halodi3/debian.README.gz for details.
 
-Package: linux-image-unsigned-5.4.24-rt15-halodi2-generic-lpae-dbgsym
+Package: linux-image-unsigned-5.4.24-rt15-halodi3-generic-lpae-dbgsym
 Build-Profiles: <!stage1>
 Architecture: armhf
 Section: devel
@@ -415,27 +415,27 @@ Description: Linux kernel debug image for version 5.4.24-rt15 on 64 bit x86 SMP
  is uncompressed, and unstripped. This package also includes the
  unstripped modules.
 
-Package: linux-tools-5.4.24-rt15-halodi2-generic-lpae
+Package: linux-tools-5.4.24-rt15-halodi3-generic-lpae
 Build-Profiles: <!stage1>
 Architecture: armhf
 Section: devel
 Priority: optional
-Depends: ${misc:Depends}, linux-tools-5.4.24-rt15-halodi2
-Description: Linux kernel version specific tools for version 5.4.24-rt15-halodi2
+Depends: ${misc:Depends}, linux-tools-5.4.24-rt15-halodi3
+Description: Linux kernel version specific tools for version 5.4.24-rt15-halodi3
  This package provides the architecture dependant parts for kernel
  version locked tools (such as perf and x86_energy_perf_policy) for
- version 5.4.24-rt15-halodi2 on
+ version 5.4.24-rt15-halodi3 on
  64 bit x86.
 
-Package: linux-cloud-tools-5.4.24-rt15-halodi2-generic-lpae
+Package: linux-cloud-tools-5.4.24-rt15-halodi3-generic-lpae
 Build-Profiles: <!stage1>
 Architecture: armhf
 Section: devel
 Priority: optional
-Depends: ${misc:Depends}, linux-cloud-tools-5.4.24-rt15-halodi2
-Description: Linux kernel version specific cloud tools for version 5.4.24-rt15-halodi2
+Depends: ${misc:Depends}, linux-cloud-tools-5.4.24-rt15-halodi3
+Description: Linux kernel version specific cloud tools for version 5.4.24-rt15-halodi3
  This package provides the architecture dependant parts for kernel
- version locked tools for cloud for version 5.4.24-rt15-halodi2 on
+ version locked tools for cloud for version 5.4.24-rt15-halodi3 on
  64 bit x86.
 
 Package: linux-udebs-generic-lpae
@@ -449,7 +449,7 @@ Description: Metapackage depending on kernel udebs
  for easier version and migration tracking.
 
 
-Package: linux-buildinfo-5.4.24-rt15-halodi2-generic-lpae
+Package: linux-buildinfo-5.4.24-rt15-halodi3-generic-lpae
 Build-Profiles: <!stage1>
 Architecture: armhf
 Section: kernel
@@ -462,17 +462,17 @@ Description: Linux kernel buildinfo for version 5.4.24-rt15 on 64 bit x86 SMP
  .
  You likely do not want to install this package.
 
-Package: linux-image-unsigned-5.4.24-rt15-halodi2-snapdragon
+Package: linux-image-unsigned-5.4.24-rt15-halodi3-snapdragon
 Build-Profiles: <!stage1>
 Architecture: arm64
 Section: kernel
 Priority: optional
 Provides: linux-image, fuse-module, aufs-dkms, kvm-api-4, redhat-cluster-modules, ivtv-modules, virtualbox-guest-modules [amd64 x32], ${linux:rprovides}
-Depends: ${misc:Depends}, ${shlibs:Depends}, kmod, linux-base (>= 4.5ubuntu1~16.04.1), linux-modules-5.4.24-rt15-halodi2-snapdragon
+Depends: ${misc:Depends}, ${shlibs:Depends}, kmod, linux-base (>= 4.5ubuntu1~16.04.1), linux-modules-5.4.24-rt15-halodi3-snapdragon
 Recommends: grub-pc [amd64 x32] | grub-efi-amd64 [amd64 x32] | grub-efi-ia32 [amd64 x32] | grub [amd64 x32] | lilo [amd64 x32] | flash-kernel [armhf arm64] | grub-ieee1275 [ppc64el], initramfs-tools | linux-initramfs-tool
 Breaks: flash-kernel (<< 3.90ubuntu2) [arm64 armhf], s390-tools (<< 2.3.0-0ubuntu3) [s390x]
-Conflicts: linux-image-5.4.24-rt15-halodi2-snapdragon
-Suggests: fdutils, linux-doc | linux-source-5.4.24-rt15, linux-tools, linux-headers-5.4.24-rt15-halodi2-snapdragon
+Conflicts: linux-image-5.4.24-rt15-halodi3-snapdragon
+Suggests: fdutils, linux-doc | linux-source-5.4.24-rt15, linux-tools, linux-headers-5.4.24-rt15-halodi3-snapdragon
 Description: Linux kernel image for version 5.4.24-rt15 on 64 bit x86 SMP
  This package contains the unsigned Linux kernel image for version 5.4.24-rt15 on
  64 bit x86 SMP.
@@ -485,7 +485,7 @@ Description: Linux kernel image for version 5.4.24-rt15 on 64 bit x86 SMP
  the linux-snapdragon meta-package, which will ensure that upgrades work
  correctly, and that supporting packages are also installed.
 
-Package: linux-modules-5.4.24-rt15-halodi2-snapdragon
+Package: linux-modules-5.4.24-rt15-halodi3-snapdragon
 Build-Profiles: <!stage1>
 Architecture: arm64
 Section: kernel
@@ -505,12 +505,12 @@ Description: Linux kernel extra modules for version 5.4.24-rt15 on 64 bit x86 SM
  the linux-snapdragon meta-package, which will ensure that upgrades work
  correctly, and that supporting packages are also installed.
 
-Package: linux-modules-extra-5.4.24-rt15-halodi2-snapdragon
+Package: linux-modules-extra-5.4.24-rt15-halodi3-snapdragon
 Build-Profiles: <!stage1>
 Architecture: arm64
 Section: kernel
 Priority: optional
-Depends: ${misc:Depends}, ${shlibs:Depends}, linux-image-5.4.24-rt15-halodi2-snapdragon | linux-image-unsigned-5.4.24-rt15-halodi2-snapdragon, crda | wireless-crda
+Depends: ${misc:Depends}, ${shlibs:Depends}, linux-image-5.4.24-rt15-halodi3-snapdragon | linux-image-unsigned-5.4.24-rt15-halodi3-snapdragon, crda | wireless-crda
 Description: Linux kernel extra modules for version 5.4.24-rt15 on 64 bit x86 SMP
  This package contains the Linux kernel extra modules for version 5.4.24-rt15 on
  64 bit x86 SMP.
@@ -527,21 +527,21 @@ Description: Linux kernel extra modules for version 5.4.24-rt15 on 64 bit x86 SM
  the linux-snapdragon meta-package, which will ensure that upgrades work
  correctly, and that supporting packages are also installed.
 
-Package: linux-headers-5.4.24-rt15-halodi2-snapdragon
+Package: linux-headers-5.4.24-rt15-halodi3-snapdragon
 Build-Profiles: <!stage1>
 Architecture: arm64
 Section: devel
 Priority: optional
-Depends: ${misc:Depends}, linux-headers-5.4.24-rt15-halodi2, ${shlibs:Depends}
+Depends: ${misc:Depends}, linux-headers-5.4.24-rt15-halodi3, ${shlibs:Depends}
 Provides: linux-headers, linux-headers-3.0
 Description: Linux kernel headers for version 5.4.24-rt15 on 64 bit x86 SMP
  This package provides kernel header files for version 5.4.24-rt15 on
  64 bit x86 SMP.
  .
  This is for sites that want the latest kernel headers.  Please read
- /usr/share/doc/linux-headers-5.4.24-rt15-halodi2/debian.README.gz for details.
+ /usr/share/doc/linux-headers-5.4.24-rt15-halodi3/debian.README.gz for details.
 
-Package: linux-image-unsigned-5.4.24-rt15-halodi2-snapdragon-dbgsym
+Package: linux-image-unsigned-5.4.24-rt15-halodi3-snapdragon-dbgsym
 Build-Profiles: <!stage1>
 Architecture: arm64
 Section: devel
@@ -558,27 +558,27 @@ Description: Linux kernel debug image for version 5.4.24-rt15 on 64 bit x86 SMP
  is uncompressed, and unstripped. This package also includes the
  unstripped modules.
 
-Package: linux-tools-5.4.24-rt15-halodi2-snapdragon
+Package: linux-tools-5.4.24-rt15-halodi3-snapdragon
 Build-Profiles: <!stage1>
 Architecture: arm64
 Section: devel
 Priority: optional
-Depends: ${misc:Depends}, linux-tools-5.4.24-rt15-halodi2
-Description: Linux kernel version specific tools for version 5.4.24-rt15-halodi2
+Depends: ${misc:Depends}, linux-tools-5.4.24-rt15-halodi3
+Description: Linux kernel version specific tools for version 5.4.24-rt15-halodi3
  This package provides the architecture dependant parts for kernel
  version locked tools (such as perf and x86_energy_perf_policy) for
- version 5.4.24-rt15-halodi2 on
+ version 5.4.24-rt15-halodi3 on
  64 bit x86.
 
-Package: linux-cloud-tools-5.4.24-rt15-halodi2-snapdragon
+Package: linux-cloud-tools-5.4.24-rt15-halodi3-snapdragon
 Build-Profiles: <!stage1>
 Architecture: arm64
 Section: devel
 Priority: optional
-Depends: ${misc:Depends}, linux-cloud-tools-5.4.24-rt15-halodi2
-Description: Linux kernel version specific cloud tools for version 5.4.24-rt15-halodi2
+Depends: ${misc:Depends}, linux-cloud-tools-5.4.24-rt15-halodi3
+Description: Linux kernel version specific cloud tools for version 5.4.24-rt15-halodi3
  This package provides the architecture dependant parts for kernel
- version locked tools for cloud for version 5.4.24-rt15-halodi2 on
+ version locked tools for cloud for version 5.4.24-rt15-halodi3 on
  64 bit x86.
 
 Package: linux-udebs-snapdragon
@@ -592,7 +592,7 @@ Description: Metapackage depending on kernel udebs
  for easier version and migration tracking.
 
 
-Package: linux-buildinfo-5.4.24-rt15-halodi2-snapdragon
+Package: linux-buildinfo-5.4.24-rt15-halodi3-snapdragon
 Build-Profiles: <!stage1>
 Architecture: arm64
 Section: kernel

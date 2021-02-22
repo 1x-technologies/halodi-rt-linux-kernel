@@ -1,3 +1,10 @@
+linux (5.4.24-rt15-halodi3) focal; urgency=medium
+
+  * Build for Focal. 
+  * No change in configuration
+
+ -- Jesper Smith <jesper@halodi.com>  Mon, 22 Feb 2021 18:02:55 +0100
+
 linux (5.4.24-rt15-halodi2) bionic; urgency=medium
 
   * Added liblz4-tool to dependency list
