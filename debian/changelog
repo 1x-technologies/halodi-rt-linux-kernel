@@ -1,3 +1,9 @@
+linux (5.4.93-rt51-halodi2) focal; urgency=medium
+
+  *  Fix build dependencies
+
+ -- Jesper Smith <jesper@halodi.com>  Tue, 23 Feb 2021 11:22:02 +0100
+
 linux (5.4.93-rt51-halodi1) focal; urgency=medium
 
   * Updated to the newest stable RT patch
