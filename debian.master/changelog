@@ -1,6 +1,6 @@
-linux (5.10.30-051030.202104140332) groovy; urgency=low
+linux (5.10.30-rt37-halodi1) focal; urgency=medium
 
-  Mainline build at commit: v5.10.30
+  *  New kernel with tiger lake support
 
- -- Mainline Build <kernel@gloin>  Wed, 14 Apr 2021 03:32:23 -0400
+ -- Jesper Smith <jesper@halodi.com>  Mon, 03 May 2021 14:44:39 +0200
 
